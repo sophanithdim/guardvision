@@ -71,3 +71,34 @@
     
 })(jQuery);
 
+document
+  .getElementById("languageSwitch")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const isEnglish = this.textContent === "EN";
+    this.textContent = isEnglish ? "TH" : "EN";
+
+    // Redirect to the appropriate HTML page
+    if (isEnglish) {
+      window.location.href = "index-thai.html"; // Switch to Thai page
+    } else {
+      window.location.href = "index.html"; // Switch to English page
+    }
+  });
+document
+  .getElementById("phoneLink")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default phone dial action
+
+    const phoneNumber = "+66 952 343 930";
+
+    navigator.clipboard
+      .writeText(phoneNumber)
+      .then(() => {
+        alert("Phone number copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy phone number: ", err);
+      });
+  });
