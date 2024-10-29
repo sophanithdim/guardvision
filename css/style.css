@@ -190,19 +190,19 @@ h6,
 .hero-header {
     background: linear-gradient(rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)), url(../img/carousel-1.jpg) top right no-repeat;
     background-size: cover;
-    background-position: center -200px; /* Position for mobile screens */
+    background-position: center -50px; /* Position for mobile screens */
 }
 
 /* Adjust for larger screens */
 @media (min-width: 768px) {
     .hero-header {
-        background-position: center -350px; /* Adjust for tablet screens */
+        background-position: center -50px; /* Adjust for tablet screens */
     }
 }
 
 @media (min-width: 1024px) {
     .hero-header {
-        background-position: center -800px; /* Adjust for laptop/desktop screens */
+        background-position: center -50px; /* Adjust for laptop/desktop screens */
     }
 }
 
